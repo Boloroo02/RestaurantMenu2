@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Холбоо барих – Ресторан</title>
+
+  <!-- Зөвхөн Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Танай theme/style -->
+  <link rel="stylesheet" href="style.css" />
+  <style>html{scroll-behavior:smooth}</style>
+</head>
+<body class="bg-light">
+
+<!-- Header (JS-гүй, flex навбар) -->
+<header class="navbar theme-navbar navbar-light sticky-top">
+  <!-- Header: desktop = хэвийн nav, mobile = sidebar (offcanvas) -->
+<header class="navbar navbar-light theme-navbar sticky-top">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a class="navbar-brand fw-bold m-0" href="index.html">Ресторан</a>
+
+    <!-- Desktop nav -->
+    <ul class="nav d-none d-md-flex gap-1">
+      <li class="nav-item"><a class="nav-link" href="index.html#hot-appetizer">Халуун зууш</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#salad">Салат</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#soup">Шөл</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#mongolian-meals">Монгол хоол</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#grills">Грилл</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#main-dish">Үндсэн хоол</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#drinks">Ундаа</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html">🏠 Нүүр</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">📍 Холбоо барих</a></li>
+    </ul>
+
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler d-md-none" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
+            aria-controls="mobileNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile sidebar -->
+<div class="offcanvas offcanvas-start offcanvas-pink" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mobileNavLabel">Цэс</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <!-- index.html доторхи sidebar -->
+<div id="mobileNav" class="offcanvas offcanvas-start offcanvas-pink" tabindex="-1">
+  <div class="offcanvas-body">
+    <nav class="nav flex-column">
+      <a class="nav-link" href="#hot-appetizer" data-bs-dismiss="offcanvas">Халуун зууш</a>
+      <a class="nav-link" href="#salad"           data-bs-dismiss="offcanvas">Салат</a>
+      <a class="nav-link" href="#soup"            data-bs-dismiss="offcanvas">Шөл</a>
+      <a class="nav-link" href="#mongolian-meals" data-bs-dismiss="offcanvas">Монгол хоол</a>
+      <a class="nav-link" href="#grills"          data-bs-dismiss="offcanvas">Грилл</a>
+      <a class="nav-link" href="#main-dish"       data-bs-dismiss="offcanvas">Үндсэн хоол</a>
+      <a class="nav-link" href="#drinks"          data-bs-dismiss="offcanvas">Ундаа</a>
+      <a class="nav-link" href="index.html"       data-bs-dismiss="offcanvas">🏠 Нүүр</a>
+      <a class="nav-link" href="contact.html"     data-bs-dismiss="offcanvas">📍 Холбоо барих</a>
+    </nav>
+  </div>
+</div>
+</header>
+
+<!-- Main -->
+<main class="container py-4">
+
+  <div class="mb-4">
+    <h1 class="h3 mb-0">Меню</h1>
+    <small class="text-muted">Үнэ төгрөгөөр (₮)</small>
+  </div>
+
+  <!-- ХАЛУУН ЗУУШ -->
+  <section id="hot-appetizer" class="mb-5">
+    <h2 class="h4 pb-2 mb-3 border-bottom">ХАЛУУН ЗУУШ / HOT APPETIZER</h2>
+    <ul class="list-group shadow-sm">
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div><div class="fw-semibold">Шаржигнуур тахиа</div><small class="text-muted">Тахианы цээж мах, салат навч, тараган соус</small></div>
+        <span class="badge bg-primary rounded-pill">₮ 19,500</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div><div class="fw-semibold">Нэрийн зууш</div><small class="text-muted">Бекон, утсан хиам, тахианы далавч, өргөст хэмх, улаан лооль, олив, яншуй, сармистай шарсан талх</small></div>
+        <span class="badge bg-primary rounded-pill">₮ 24,000</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div><div class="fw-semibold">Чихэрлэг соустай тахиа</div><small class="text-muted">Тахианы цээж мах, салат навч, соус</small></div>
+        <span class="badge bg-primary rounded-pill">₮ 21,500</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- САЛАТ -->
+  <section id="salad" class="mb-5">
+    <h2 class="h4 pb-2 mb-3 border-bottom">САЛАТ / SALAD</h2>
+    <ul class="list-group shadow-sm">
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div><div class="fw-semibold">Нэрийн салат</div><small class="text-muted">Тахианы цээж мах, өндөг, өргөст хэмх, улаан лооль, салат навч, бекон, крутон, соус</small></div>
+        <span class="badge bg-primary rounded-pill">₮ 18,000</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div><div class="fw-semibold">Грек салат</div><small class="text-muted">Өргөст хэмх, улаан лооль, чинжүү, салат навч, бууцай, олив, ягаан сонгино, фета бяслаг, соус</small></div>
+        <span class="badge bg-primary rounded-pill">₮ 18,000</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div><div class="fw-semibold">Гүзээн салат (Tripe salad)</div><small class="text-muted">Гүзээ, амтат чинжүү, лууван, сонгино, яншуй, ази соус</small></div>
+        <span class="badge bg-primary rounded-pill">₮ 16,000</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div><div class="fw-semibold">Ногоон салат</div><small class="text-muted">Салат навч, бууцай, редиск, ягаан байцаа, лууван, өргөст хэмх, улаан сонгино, усан үзэм, базилик соус</small></div>
+        <span class="badge bg-primary rounded-pill">₮ 16,500</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ШӨЛ -->
+  <section id="soup" class="mb-5">
+    <h2 class="h4 pb-2 mb-3 border-bottom">ШӨЛ / SOUP</h2>
+    <ul class="list-group shadow-sm">
+      <li class="list-group-item d-flex justify-content-between align-items-start"><div><div class="fw-semibold">Нэрийн шөл</div><small class="text-muted">Хясаа, сам хорхой, далайн загас, хаш, хулуу, халуун соус</small></div><span class="badge bg-primary rounded-pill">₮ 20,000</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-start"><div><div class="fw-semibold">Удон шөл</div><small class="text-muted">Удон гоймон, юуцай, өндөг, лууван, хаш, хулуу, үхрийн мах, бор мөөг</small></div><span class="badge bg-primary rounded-pill">₮ 19,000</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-start"><div><div class="fw-semibold">Тахиан махтай ази шөл</div><small class="text-muted">Тахианы мах, төмс, лууван, будаа</small></div><span class="badge bg-primary rounded-pill">₮ 18,500</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-start"><div><div class="fw-semibold">Хулууны зутан</div><small class="text-muted">Хулуу, цөцгий, сүү</small></div><span class="badge bg-primary rounded-pill">₮ 14,000</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-start"><div><div class="fw-semibold">Брокколи зутан</div><small class="text-muted">Брокколи, цөцгий, сүү</small></div><span class="badge bg-primary rounded-pill">₮ 14,000</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-start"><div><div class="fw-semibold">Мөөгний зутан</div><small class="text-muted">Шампиньон мөөг, цөцгий, сүү</small></div><span class="badge bg-primary rounded-pill">₮ 14,000</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-start"><div><div class="fw-semibold">Калбитан</div><small class="text-muted">Үхрийн хавирга, нарийн пүнтүүз, шар соус</small></div><span class="badge bg-primary rounded-pill">₮ 21,000</span></li>
+    </ul>
+  </section>
+
+  <!-- МОНГОЛ ХООЛ -->
+  <section id="mongolian-meals" class="mb-5">
+    <h2 class="h4 pb-2 mb-3 border-bottom">МОНГОЛ ХООЛ / MONGOLIAN MEALS</h2>
+    <ul class="list-group shadow-sm">
+      <li class="list-group-item d-flex justify-content-between"><span>Банштай хавиргатай шөл</span><span class="fw-semibold">₮ 18,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Борцтой гурилтай шөл</span><span class="fw-semibold">₮ 18,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Таван туллын шөл</span><span class="fw-semibold">₮ 15,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Цуйван</span><span class="fw-semibold">₮ 19,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Таван туллын цуйван</span><span class="fw-semibold">₮ 18,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Бууз</span><span class="fw-semibold">₮ 23,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Хуушуур</span><span class="fw-semibold">₮ 24,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Үхрийн жигнэсэн хавирга</span><span class="fw-semibold">₮ 29,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Шарсан элэг</span><span class="fw-semibold">₮ 19,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Үхрийн өвчүү, алаг мах</span><span class="fw-semibold">₮ 24,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Алаг махан цуйван</span><span class="fw-semibold">₮ 21,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Шарсан үхрийн мах (2 хүн)</span><span class="fw-semibold">₮ 36,000</span></li>
+    </ul>
+  </section>
+
+  <!-- ГРИЛЛ -->
+  <section id="grills" class="mb-5">
+    <h2 class="h4 pb-2 mb-3 border-bottom">ГРИЛЛ / GRILL’S</h2>
+    <ul class="list-group shadow-sm">
+      <li class="list-group-item d-flex justify-content-between"><span>Гахайн нуруу</span><span class="fw-semibold">₮ 30,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Гахайн хүзүү</span><span class="fw-semibold">₮ 30,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Хонины шарсан нуруу</span><span class="fw-semibold">₮ 26,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Хонины шарсан хавирга</span><span class="fw-semibold">₮ 27,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Үхрийн махан кебаб</span><span class="fw-semibold">₮ 26,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Гриллдсэн тахиа</span><span class="fw-semibold">₮ 27,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Грилл махны тавгаа (2 хүн)</span><span class="fw-semibold">₮ 53,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Грилл тахианы тавгаа (2 хүн)</span><span class="fw-semibold">₮ 56,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Халуун ногоотой гахайн шарсан мах — Жижиг</span><span class="fw-semibold">₮ 32,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Халуун ногоотой гахайн шарсан мах — Том</span><span class="fw-semibold">₮ 36,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Терияки соустай жигнэсэн үхрийн мах (2 хүн)</span><span class="fw-semibold">₮ 44,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Америк шарсан төмс</span><span class="fw-semibold">₮ 9,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Сармистай шарсан талх</span><span class="fw-semibold">₮ 4,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Будаа</span><span class="fw-semibold">₮ 1,500</span></li>
+    </ul>
+  </section>
+
+  <!-- ҮНДСЭН ХООЛ -->
+  <section id="main-dish" class="mb-5">
+    <h2 class="h4 pb-2 mb-3 border-bottom">ҮНДСЭН ХООЛ / MAIN DISH</h2>
+    <ul class="list-group shadow-sm">
+      <li class="list-group-item d-flex justify-content-between"><span>Нэрийн хоол (2 хүн)</span><span class="fw-semibold">₮ 58,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Нэрийн хоол (4 хүн)</span><span class="fw-semibold">₮ 91,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Үдон поймонтой хуурга /Beef udon/</span><span class="fw-semibold">₮ 22,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Терияки сүмстэй жигнэсэн тахиа</span><span class="fw-semibold">₮ 26,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Гордон блю</span><span class="fw-semibold">₮ 26,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Шарах шүүгээнд жигнэсэн загас</span><span class="fw-semibold">₮ 33,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Шорлог (гахай, тахиа) — 2 хүн</span><span class="fw-semibold">₮ 48,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Шорлог (гахай, тахиа) — 4 хүн</span><span class="fw-semibold">₮ 75,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Монгол хоолны цуглуулга (4 хүн)</span><span class="fw-semibold">₮ 74,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Үхрийн гол махан стейк</span><span class="fw-semibold">₮ 36,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Гриллдэж шарсан тахианы цээж мах</span><span class="fw-semibold">₮ 33,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Мексик пахита (fajita’s)</span><span class="fw-semibold">₮ 33,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Хонины шарсан гуя</span><span class="fw-semibold">₮ 34,000</span></li>
+    </ul>
+  </section>
+
+  <!-- УНДАА -->
+  <section id="drinks" class="mb-5">
+    <h2 class="h4 pb-2 mb-3 border-bottom">ХАЛУУН ЦАЙ, КОФЕ, УНДАА / HOT TEA, COFFEE AND DRINK</h2>
+    <ul class="list-group shadow-sm">
+      <li class="list-group-item d-flex justify-content-between"><span>Lipton</span><span class="fw-semibold">₮ 2,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Loyd black tea</span><span class="fw-semibold">₮ 2,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Loyd green tea</span><span class="fw-semibold">₮ 2,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Loyd fruit tea</span><span class="fw-semibold">₮ 2,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Гүцтэй – Green tea</span><span class="fw-semibold">₮ 3,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Эспрессо</span><span class="fw-semibold">₮ 7,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Американо</span><span class="fw-semibold">₮ 7,000</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Капучино</span><span class="fw-semibold">₮ 8,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Латте</span><span class="fw-semibold">₮ 8,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Coca-Cola (light/zero)</span><span class="fw-semibold">₮ 5,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Fanta (orange/grape)</span><span class="fw-semibold">₮ 5,500</span></li>
+      <li class="list-group-item d-flex justify-content-between"><span>Sprite</span><span class="fw-semibold">₮ 5,500</span></li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer py-4">
+  <div class="container text-center small">
+    © 2025 Ресторан • 📞 9555-1921 • 📍 Эрдэнэт хот
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const ocEl = document.getElementById('mobileNav');
+  if (!ocEl) return;
+
+  document.querySelectorAll('#mobileNav a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      const hash = a.getAttribute('href');
+      const target = document.querySelector(hash);
+      const oc = bootstrap.Offcanvas.getOrCreateInstance(ocEl);
+      // offcanvas-аа хаагаад, хаагдсаны дараа скролл хийнэ
+      function afterHide() {
+        ocEl.removeEventListener('hidden.bs.offcanvas', afterHide);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+      ocEl.addEventListener('hidden.bs.offcanvas', afterHide);
+      oc.hide();
+    });
+  });
+});
+</script>
+</body>
+</html>

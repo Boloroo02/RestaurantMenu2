@@ -1,0 +1,158 @@
+:root{
+  --brand-500: #f48fb1;  /* үндсэн ягаан */
+  --brand-600: #ec6f93;  /* hover */
+  --brand-700: #d85a88;  /* active */
+  --brand-border: #ffd6e3;
+
+  --bs-primary: var(--brand-500);
+  --bs-primary-rgb: 244, 143, 177;
+  --bs-link-color: var(--brand-700);
+  --bs-link-hover-color: var(--brand-600);
+}
+
+/* Ерөнхий фон, өнгө */
+body{
+  background:#fff7fa;
+  color:#212529;
+}
+
+/* Navbar */
+.navbar.theme-navbar{
+  background:#fff;
+  border-bottom:1px solid var(--brand-border);
+}
+.navbar.theme-navbar .navbar-brand{
+  color:var(--brand-700);
+}
+.navbar.theme-navbar .nav-link{
+  color:#212529;
+  border-radius:.5rem;
+  padding:.5rem .75rem;
+  transition:background .2s ease, color .2s ease;
+}
+.navbar.theme-navbar .nav-link:hover,
+.navbar.theme-navbar .nav-link.active{
+  background:#ffe9f1;
+  color:var(--brand-700);
+  font-weight:600;
+}
+
+/* Товч */
+.btn-primary{
+  --bs-btn-bg: var(--brand-500);
+  --bs-btn-border-color: var(--brand-500);
+  --bs-btn-hover-bg: var(--brand-600);
+  --bs-btn-hover-border-color: var(--brand-600);
+  --bs-btn-active-bg: var(--brand-700);
+  --bs-btn-active-border-color: var(--brand-700);
+  border-radius:999px;
+}
+
+/* List group */
+.list-group-item{
+  border-color:var(--brand-border);
+  background:#fff;
+}
+
+/* ---- НЭГДСЭН ҮНЭНИЙ PILL ---- */
+/* badge хэлбэрийн бүх pill */
+.badge.bg-primary,
+.badge.rounded-pill{
+  background-color: var(--brand-500) !important;
+  color: #fff !important;
+  border-radius: 999px;
+  padding: .5rem .75rem;
+  min-width: 7rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Хоёр span-тэй мөрүүд (Монгол хоол, Грилл гэх мэт) */
+.list-group-item.d-flex > span:last-child{
+  background: var(--brand-500);
+  color: #fff;
+  border-radius: 999px;
+  padding: .5rem .75rem;
+  min-width: 7rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Гарчиг */
+section > h2{
+  border-bottom:1px solid var(--brand-border);
+  padding-bottom:.5rem;
+  color:var(--brand-700);
+}
+
+/* Footer */
+footer.footer{
+  background:#fff;
+  border-top:1px solid var(--brand-border);
+  color:#212529;
+}
+footer a{
+  color:var(--brand-700);
+  text-decoration:none;
+}
+footer a:hover{
+  color:var(--brand-600);
+}
+
+/* Scroll animation */
+html{ scroll-behavior:smooth; }
+section{ scroll-margin-top:90px; }
+/* ==== Пилл үнийн НЭГДСЭН ХЭМЖЭЭ ==== */
+/* Аль ч хэлбэртэй байсан (badge эсвэл span:last-child) ижил дүрэм үйлчилнэ */
+.badge.bg-primary,
+.list-group-item.d-flex > span:last-child{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Нэг хэмжээ */
+  height: 2.2rem;          /* тогтмол өндөр */
+  min-width: 7.5rem;       /* тогтмол өргөн */
+  padding: 0 .9rem;        /* өндрийг тогтмол болгосон тул босоо padding=0 */
+
+  /* Загвар */
+  background-color: var(--brand-500) !important;
+  color: #fff !important;
+  border-radius: 999px;
+  font-weight: 700;        /* бүгд ижил жин */
+  font-size: 0.95rem;      /* бүгд ижил фонт хэмжээ */
+  line-height: 1;          /* өндрийг тогтмол барина */
+  text-align: center;
+  white-space: nowrap;     /* мөр шилжүүлэхгүй */
+}
+
+/* Хэрвээ .badge дээрх default font-size нөлөөлөөд байвал тэгшлэх */
+.badge{
+  font-size: inherit;      /* дээрх 0.95rem-ийг хэрэгжүүлнэ */
+}
+/* Offcanvas sidebar — soft pink theme */
+.offcanvas-pink{
+  background:#fff;
+  border-right:1px solid var(--brand-border);
+}
+.offcanvas-pink .offcanvas-title{ color: var(--brand-700); }
+
+.offcanvas-pink .nav-link{
+  color:#212529;
+  padding:.75rem 1rem;
+  border-radius:.5rem;
+}
+.offcanvas-pink .nav-link:hover,
+.offcanvas-pink .nav-link:focus,
+.offcanvas-pink .nav-link.active{
+  background:#ffe9f1;
+  color:var(--brand-700);
+}
+
+.offcanvas-backdrop.show{ opacity:.2; }  /* зөөлөн бараанжилт */
+
+/* Navbar toggler рамийг ягаанд уялдуулах */
+.navbar-light .navbar-toggler{
+  border-color: var(--brand-border);
+}
+.navbar-light .navbar-toggler:focus{ box-shadow:0 0 0 .2rem #ffe9f1; }
